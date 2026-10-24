@@ -38,10 +38,10 @@ import { asset, WHATSAPP } from '../utils'
               :aria-label="item.label"
               class="rounded-sm p-2 text-gray-700 transition-colors duration-200 hover:bg-gray-200 hover:text-gray-900"
             >
-              <svg viewBox="0 0 24 24" class="size-5" fill="currentColor" aria-hidden="true"><path :d="item.path" /></svg>
+              <svg viewBox="0 0 24 24" class="size-5" fill="currentColor" aria-hidden="true"><path :d="item.path" fill-rule="evenodd" /></svg>
             </a>
           </div>
-          <div class="mt-3 ml-2 text-sm text-gray-700 lg:mt-0 lg:inline">© 2026 Mualaf Center Indonesia Peduli Kendal.</div>
+          <div class="mt-3 ml-2 text-sm text-gray-700 lg:mt-0 lg:inline">© 2026 MCI Peduli Kendal.</div>
         </div>
       </div>
 

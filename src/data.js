@@ -5,36 +5,39 @@ export const news = {
 
 export const programs = [
   {
-    title: 'Pembinaan Mualaf',
-    body: 'Membimbing mualaf mempelajari Islam secara bertahap, mulai dari ibadah harian hingga pemahaman akidah yang benar.',
-    icon: [
-      ['path', { d: 'M12 7v14' }],
-      ['path', { d: 'M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z' }],
-    ],
-    button: 'Konsultasi',
-  },
-  {
-    title: 'Pendampingan Mualaf',
-    body: 'Mendampingi mualaf dalam kehidupan sehari-hari agar tetap istiqamah dan merasa diterima di lingkungan Muslim.',
-    icon: [
-      ['path', { d: 'M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2' }],
-      ['path', { d: 'M16 3.128a4 4 0 0 1 0 7.744' }],
-      ['path', { d: 'M22 21v-2a4 4 0 0 0-3-3.87' }],
-      ['circle', { cx: '9', cy: '7', r: '4' }],
-    ],
-    button: 'Syahadat',
-  },
-  {
-    title: 'Advokasi Untuk Mualaf',
-    body: 'Mendampingi mualaf yang menghadapi kendala hukum, keluarga, atau administrasi agar hak-haknya tetap terjaga.',
-    icon: [
-      ['path', { d: 'm14 13-8.381 8.38a1 1 0 0 1-3.001-3l8.384-8.381' }],
-      ['path', { d: 'm16 16 6-6' }],
-      ['path', { d: 'm21.5 10.5-8-8' }],
-      ['path', { d: 'm8 8 6-6' }],
-      ['path', { d: 'm8.5 7.5 8 8' }],
-    ],
-    button: 'Konsultasi Hukum',
+        title: 'Pembinaan Mualaf',
+        body: 'Membimbing mualaf mempelajari Islam secara bertahap, mulai dari ibadah harian hingga pemahaman akidah yang benar.',
+        icon: [
+          ['path', { d: 'M12 7v14' }],
+          ['path', { d: 'M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z' }],
+        ],
+        button: 'Konsultasi',
+        textSent: 'pembinaan mualaf',
+      },
+      {
+        title: 'Pendampingan Mualaf',
+        body: 'Mendampingi mualaf dalam kehidupan sehari-hari agar tetap istiqamah dan merasa diterima di lingkungan Muslim.',
+        icon: [
+          ['path', { d: 'M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2' }],
+          ['path', { d: 'M16 3.128a4 4 0 0 1 0 7.744' }],
+          ['path', { d: 'M22 21v-2a4 4 0 0 0-3-3.87' }],
+          ['circle', { cx: '9', cy: '7', r: '4' }],
+        ],
+        button: 'Syahadat',
+        textSent: 'proses syahadat',
+      },
+      {
+        title: 'Advokasi Untuk Mualaf',
+        body: 'Mendampingi mualaf yang menghadapi kendala hukum, keluarga, atau administrasi agar hak-haknya tetap terjaga.',
+        icon: [
+          ['path', { d: 'm14 13-8.381 8.38a1 1 0 0 1-3.001-3l8.384-8.381' }],
+          ['path', { d: 'm16 16 6-6' }],
+          ['path', { d: 'm21.5 10.5-8-8' }],
+          ['path', { d: 'm8 8 6-6' }],
+          ['path', { d: 'm8.5 7.5 8 8' }],
+        ],
+        button: 'Konsultasi Hukum',
+        textSent: 'advokasi hukum mualaf',
   },
 ]
 
@@ -83,14 +86,14 @@ export const stats = [
     icon: '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>',
   },
   {
-    value: '13',
-    label: 'Program',
+    value: '3',
+    label: 'Program Utama',
     icon: '<path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/>',
   },
   {
-    value: '13',
-    label: 'Provinsi',
-    icon: '<path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"/><circle cx="12" cy="10" r="3"/>',
+    value: '10',
+    label: 'Program Unggulan',
+    icon: '<path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/>',
   },
 ]
 
@@ -103,7 +106,7 @@ export const socials = [
   {
     label: 'Instagram',
     href: 'https://www.instagram.com/mcipeduli_kendal',
-    path: 'M12.001 9C10.3436 9 9.00098 10.3431 9.00098 12C9.00098 13.6573 10.3441 15 12.001 15C13.6583 15 15.001 13.6569 15.001 12C15.001 10.3427 13.6579 9 12.001 9ZM12.001 7C14.7614 7 17.001 9.2371 17.001 12C17.001 14.7605 14.7639 17 12.001 17C9.24051 17 7.00098 14.7629 7.00098 12C7.00098 9.23953 9.23808 7 12.001 7ZM18.501 6.74915C18.501 7.43926 17.9402 7.99917 17.251 7.99917C16.5609 7.99917 16.001 7.4384 16.001 6.74915C16.001 6.0599 16.5617 5.5 17.251 5.5C17.9393 5.49913 18.501 6.0599 18.501 6.74915ZM12.001 4C9.5265 4 9.12318 4.00655 7.97227 4.0578C6.18815 4.2 5.17416 4.38967 4.93994 5.17172C4.32655 5.97205 4.15791 6.40596C3.96831 6.89363 3.82604 8.20407C3.7748 9.35498 3.76825 12.2328C3.76825 14.7073 3.82604 16.2615C3.96831 17.572 4.15791 18.0596C4.32655 18.4936 4.93994 19.2939C5.32295 19.6769 6.17416 20.0759C6.66183 20.2655 7.97227 20.4078C9.12318 20.459 12.001 20.4656C14.4755 20.4656 16.0297 20.4078C17.3402 20.2655 17.8278 20.0759C18.2618 19.9073 19.0621 19.2939C19.4451 18.9109 19.8441 18.0596C20.0337 17.572 20.176 16.2615C20.2272 15.1106 20.2338 12.2328C20.2338 9.7583 20.176 8.20407C20.0337 6.89363 19.8441 6.40596C19.6755 5.97205 19.0621 5.17172C18.6791 4.78869 17.8278 4.38967C17.3402 4.20007 16.0297 4.0578C14.8788 4.00655 12.001 4ZM12.001 2C14.7173 2 16.1233 2.06 18.5505 2.525C19.2106 2.779 20.3224 3.678C20.8785 4.234 21.4755 5.45C21.7235 6.086 21.9405 7.877C21.9885 8.944 22.0005 12C22.0005 14.717 21.9405 16.123C21.7235 17.913 21.4755 18.55C21.2215 19.21 20.3224 20.322C19.7664 20.878 18.5505 21.475C17.9134 21.723 16.1233 21.94C15.0564 21.988 12.001 22C9.28467 22 7.87864 21.94C5.45153 21.475C4.79147 21.221 3.67962 20.322C3.12362 19.766 2.52653 18.55C2.2785 17.913 2.06145 16.123C2.01342 15.056 2.0014 12C2.0014 9.283 2.06145 7.877C2.2785 6.086 2.52653 5.45C2.78056 4.789 3.67962 3.678C4.23562 3.122 5.45153 2.525C6.08859 2.277 7.87864 2.06C8.94559 2.01 12.001 2Z',
+    path: 'M7.465 1.066C8.638 1.012 9.012 1 12 1s3.362.013 4.534.066s1.972.24 2.672.511c.733.277 1.398.71 1.948 1.27c.56.549.992 1.213 1.268 1.947c.272.7.458 1.5.512 2.67C22.988 8.639 23 9.013 23 12s-.013 3.362-.066 4.535c-.053 1.17-.24 1.97-.512 2.67a5.4 5.4 0 0 1-1.268 1.949c-.55.56-1.215.992-1.948 1.268c-.7.272-1.5.458-2.67.512c-1.174.054-1.548.066-4.536.066s-3.362-.013-4.535-.066c-1.17-.053-1.97-.24-2.67-.512a5.4 5.4 0 0 1-1.949-1.268a5.4 5.4 0 0 1-1.269-1.948c-.271-.7-.457-1.5-.511-2.67C1.012 15.361 1 14.987 1 12s.013-3.362.066-4.534s.24-1.972.511-2.672a5.4 5.4 0 0 1 1.27-1.948a5.4 5.4 0 0 1 1.947-1.269c.7-.271 1.5-.457 2.67-.511m8.98 1.98c-1.16-.053-1.508-.064-4.445-.064s-3.285.011-4.445.064c-1.073.049-1.655.228-2.043.379c-.513.2-.88.437-1.265.822a3.4 3.4 0 0 0-.822 1.265c-.151.388-.33.97-.379 2.043c-.053 1.16-.064 1.508-.064 4.445s.011 3.285.064 4.445c.049 1.073.228 1.655.379 2.043c.176.477.457.91.822 1.265c.355.365.788.646 1.265.822c.388.151.97.33 2.043.379c1.16.053 1.507.064 4.445.064s3.285-.011 4.445-.064c1.073-.049 1.655-.228 2.043-.379c.513-.2.88-.437 1.265-.822c.365-.355.646-.788.822-1.265c.151-.388.33-.97.379-2.043c.053-1.16.064-1.508.064-4.445s-.011-3.285-.064-4.445c-.049-1.073-.228-1.655-.379-2.043c-.2-.513-.437-.88-.822-1.265a3.4 3.4 0 0 0-1.265-.822c-.388-.151-.97-.33-2.043-.379m-5.85 12.345a3.669 3.669 0 0 0 4-5.986a3.67 3.67 0 1 0-4 5.986M8.002 8.002a5.654 5.654 0 1 1 7.996 7.996a5.654 5.654 0 0 1-7.996-7.996m10.906-.814a1.337 1.337 0 1 0-1.89-1.89a1.337 1.337 0 0 0 1.89 1.89',
   },
   {
     label: 'TikTok',
@@ -153,9 +156,9 @@ export const legal = [
 ]
 
 export const leaders = [
-  ['Khanif Kamil', 'Ketua Pembina', 'muslim-man-avatar-anonim.png'],
-  ['Mulyono', 'Ketua Pembina', 'muslim-man-avatar-anonim.png'],
-  ['Aris Trisetiawan', 'Ketua Pembina', 'muslim-man-avatar-anonim.png'],
+  ['Khanif Kamil', 'Ketua Umum', 'muslim-man-avatar-anonim.png'],
+  ['Mulyono', 'Bendahara', 'muslim-man-avatar-anonim.png'],
+  ['Aris Trisetiawan', 'Sekretaris Umum', 'muslim-man-avatar-anonim.png'],
 ]
 
 export const donationGroups = [
@@ -183,11 +186,7 @@ export const donationGroups = [
 ]
 
 export const branches = [
-  { province: 'Sulawesi Utara', areas: [{ name: 'Kota Bitung', people: [['Sutarman Mahmud', '0852 5640 3734']] }] },
-  { province: 'Sulawesi Selatan', areas: [{ name: 'Toraja Utara', people: [['Hilmi', '0856 9613 3151'], ['Nurdeli', '0813 4260 8897']] }] },
-  { province: 'Sulawesi Tenggara', areas: [{ name: 'Kabupaten Wakatobi', people: [['Syamsul', '0822 7890 3314']] }] },
-  { province: 'Maluku', areas: [{ name: 'Pengurus Wilayah', people: [['Ust. Imam Umbara', '0852 4350 0737']] }] },
-  { province: 'Papua', areas: [{ name: 'Kabupaten Nabire', people: [['Abdul Rasyid', '0821 5727 0022']] }] },
+  // { province: 'Sulawesi Utara', areas: [{ name: 'Kota Bitung', people: [['Sutarman Mahmud', '0852 5640 3734']] }] }
 ]
 
 export const syahadatDocs = {

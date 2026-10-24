@@ -17,7 +17,7 @@ const router = createRouter({
     { path: '/', name: 'home', component: HomeView, meta: { title: 'Mualaf Center Indonesia Peduli Kendal' } },
     { path: '/tentang', name: 'tentang', component: TentangView, meta: { title: 'Tentang Kami | Mualaf Center Indonesia Peduli Kendal' } },
     { path: '/kontak', name: 'kontak', component: KontakView, meta: { title: 'Kontak Kami | Mualaf Center Indonesia Peduli Kendal' } },
-    { path: '/cabang', name: 'cabang', component: CabangView, meta: { title: 'Pengurus/Relawan Daerah | Mualaf Center Indonesia Peduli Kendal' } },
+    // { path: '/cabang', name: 'cabang', component: CabangView, meta: { title: 'Pengurus/Relawan Daerah | Mualaf Center Indonesia Peduli Kendal' } },
     { path: '/rekening', name: 'rekening', component: RekeningView, meta: { title: 'Rekening Donasi | Mualaf Center Indonesia Peduli Kendal' } },
     { path: '/donasi', name: 'donasi', component: DonasiView, meta: { title: 'Donasi | Mualaf Center Indonesia Peduli Kendal' } },
     { path: '/syahadat', name: 'syahadat', component: SyahadatView, meta: { title: 'Syahadat | Mualaf Center Indonesia Peduli Kendal' } },

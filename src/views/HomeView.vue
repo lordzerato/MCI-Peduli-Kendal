@@ -23,7 +23,7 @@ function armStyle(index) {
   }
 }
 function programWhatsapp(title) {
-  const text = `Assalamualaikum Wr. Wb.\n\nSaya ingin bertanya tentang program ${title}.`
+  const text = `Assalamualaikum Wr. Wb. Admin, saya ingin konsultasi ${title}`
   return `https://api.whatsapp.com/send?phone=+6287710555510&text=${encodeURIComponent(text)}`
 }
 function counterStyle(index) {
@@ -38,18 +38,6 @@ function counterStyle(index) {
   <main class="relative mx-auto flex flex-col">
     <div class="px-4 pt-40 sm:pt-56">
       <section aria-label="hero" class="relative flex flex-col items-center justify-center">
-        <!-- <a
-          :href="news.href"
-          target="_blank"
-          rel="noopener"
-          class="mx-auto inline-flex max-w-full items-center gap-3 rounded-full bg-surface/80 px-2.5 py-0.5 pr-3 pl-0.5 font-medium text-gray-900 shadow-lg ring-1 ring-black/10 backdrop-blur-[1px] transition-colors hover:bg-primary/5 sm:text-sm"
-        >
-          <span class="shrink-0 truncate rounded-full border border-gray-200 bg-gray-50 px-2.5 py-1 text-sm text-gray-600 sm:text-xs">Berita</span>
-          <span class="flex min-w-0 items-center gap-1 truncate">
-            <span class="truncate">{{ news.title }}</span>
-            <svg viewBox="0 0 24 24" class="size-4 shrink-0 text-gray-700" fill="currentColor" aria-hidden="true"><path :d="arrow" /></svg>
-          </span>
-        </a> -->
 
         <h1 class="mt-8 text-center text-5xl font-semibold tracking-tighter text-gray-900 sm:text-7xl sm:leading-[1.05] lg:text-8xl lg:leading-[5.5rem]">
           <span>Mualaf</span> <span>Center</span> <span>Indonesia</span> <span>Peduli</span> <span>Kendal</span>
@@ -97,35 +85,38 @@ function counterStyle(index) {
               :key="item.title"
               class="flex h-full flex-col rounded-3xl border border-gray-200 bg-surface p-8 shadow-[0_10px_30px_-18px_rgba(0,0,0,0.55)] transition duration-300 ease-out hover:-translate-y-1 hover:border-primary/50 hover:shadow-[0_18px_40px_-18px_rgba(30,154,70,0.35)]"
             >
-              <div class="flex size-16 items-center justify-center rounded-2xl bg-primary/15 text-primary">
+              <div v-if="item.icon" class="flex size-16 items-center justify-center rounded-2xl bg-primary/15 text-primary">
                 <svg viewBox="0 0 24 24" class="size-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                   <component :is="node[0]" v-for="(node, nodeIndex) in item.icon" :key="nodeIndex" v-bind="node[1]" />
                 </svg>
               </div>
               <h3 class="mt-8 text-2xl font-semibold tracking-tight text-gray-900">{{ item.title }}</h3>
               <p class="mt-3 flex-1 text-sm leading-relaxed text-gray-600">{{ item.body }}</p>
-              <a :href="programWhatsapp(item.title)" target="_blank" rel="noopener" class="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:brightness-95">
+              <a v-if="item.button" :href="programWhatsapp(item.textSent)" target="_blank" rel="noopener" class="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:brightness-95">
                 {{ item.button }}
                 <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
               </a>
             </article>
           </div>
         </div>
-        <div class="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-3">
-          <div v-for="group in programGroups" :key="group.title" class="relative">
-            <article :class="cardClass">
-              <div class="relative flex items-center gap-2">
-                <div class="absolute -left-4 h-5 w-0.75 rounded-r-sm bg-primary"></div>
-                <h3 class="font-medium text-gray-900">{{ group.title }}</h3>
-              </div>
-              <p class="mt-2 text-gray-600 sm:text-sm">{{ group.body }}</p>
-              <ul class="mt-4 space-y-3">
-                <li v-for="child in group.items" :key="child.title" class="border-l-2 border-primary/80 pl-3">
-                  <p class="text-sm font-medium text-gray-900">{{ child.title }}</p>
-                  <p class="mt-0.5 text-sm leading-snug text-gray-600">{{ child.body }}</p>
-                </li>
-              </ul>
-            </article>
+        <div class="mt-10">
+          <span class="inline-flex rounded-full border border-primary px-4 py-1.5 text-xs font-bold tracking-[0.16em] text-primary uppercase">Program Unggulan</span>
+          <div class="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-3">
+            <div v-for="group in programGroups" :key="group.title" class="relative">
+              <article :class="cardClass">
+                <div class="relative flex items-center gap-2">
+                  <div class="absolute -left-4 h-5 w-0.75 rounded-r-sm bg-primary"></div>
+                  <h3 class="font-medium text-gray-900">{{ group.title }}</h3>
+                </div>
+                <p class="mt-2 text-gray-600 sm:text-sm">{{ group.body }}</p>
+                <ul class="mt-4 space-y-3">
+                  <li v-for="child in group.items" :key="child.title" class="border-l-2 border-primary/80 pl-3">
+                    <p class="text-sm font-medium text-gray-900">{{ child.title }}</p>
+                    <p class="mt-0.5 text-sm leading-snug text-gray-600">{{ child.body }}</p>
+                  </li>
+                </ul>
+              </article>
+            </div>
           </div>
         </div>
       </section>
@@ -190,46 +181,6 @@ function counterStyle(index) {
     </div>
 
     <SectionDivider />
-
-    <!-- <div class="px-4 xl:px-0">
-      <section class="relative mx-auto flex w-full max-w-6xl flex-col items-center justify-center overflow-hidden rounded-2xl bg-gray-950 px-6 py-4 shadow-2xl shadow-black/50 sm:px-16 md:px-28">
-        <div class="absolute top-0 left-0 z-10 h-full w-10 backdrop-blur-[2px] sm:w-14">
-          <svg class="h-full w-full text-white/20" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="diag-left" width="18" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-                <line x1="0" y1="0" x2="0" y2="18" stroke="currentColor" stroke-width="1" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#diag-left)" />
-          </svg>
-        </div>
-        <div class="absolute top-0 right-0 z-10 h-full w-10 backdrop-blur-[2px] sm:w-14">
-          <svg class="h-full w-full text-white/20" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="diag-right" width="18" height="18" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
-                <line x1="0" y1="0" x2="0" y2="18" stroke="currentColor" stroke-width="1" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#diag-right)" />
-          </svg>
-        </div>
-        <p class="pt-12 text-base font-semibold tracking-tight text-gold sm:pt-20 sm:text-lg">Video</p>
-        <h2 class="mt-6 max-w-3xl text-center text-2xl font-semibold tracking-tight text-balance text-white md:text-5xl">Mualaf Center Indonesia Peduli Kendal</h2>
-        <p class="mt-4 max-w-2xl text-center text-base text-balance text-gray-400 sm:mt-8 sm:text-xl">
-          Mendengarkan langsung dari Ketua Umum MCI Peduli Kendal tentang visi dan misi organisasi dalam membimbing para mualaf di Indonesia.
-        </p>
-        <div class="relative mt-12 mb-10 aspect-video w-full max-w-4xl sm:mb-16 md:mt-20">
-          <iframe
-            class="h-full w-full rounded-lg"
-            src="https://www.youtube.com/embed/Dn1yFcHON9s"
-            title="Mualaf Center Indonesia Peduli Kendal"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-      </section>
-    </div> -->
 
     <div class="px-4 xl:px-0">
       <section class="py-8 sm:py-16 lg:py-24">
