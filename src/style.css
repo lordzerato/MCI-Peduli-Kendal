@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #1e9a46;
+  --color-gold: #ffe14a;
+  --color-night: #07110d;
+  --color-surface: #132019;
+  --color-gray-50: #0c1612;
+  --color-gray-100: #17241e;
+  --color-gray-200: #24352c;
+  --color-gray-300: #3a5246;
+  --color-gray-400: #8aa396;
+  --color-gray-500: #a3b8ad;
+  --color-gray-600: #c5d4cc;
+  --color-gray-700: #d7e4dd;
+  --color-gray-800: #e8f0eb;
+  --color-gray-900: #f4f7f4;
+  --color-gray-950: #050907;
+  --font-sans: "Onest", ui-sans-serif, system-ui, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  background:
+    radial-gradient(ellipse 70% 42% at 50% -8%, rgb(30 154 70 / 22%), transparent 58%),
+    radial-gradient(ellipse 36% 28% at 88% 8%, rgb(255 225 74 / 8%), transparent 52%),
+    #07110d;
+  color: #f4f7f4;
+}
+
+::selection {
+  background: #ffe14a;
+  color: #07110d;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track,
+  .orbit-arm,
+  .orbit-counter {
+    animation: none !important;
+  }
+}
