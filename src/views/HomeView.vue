@@ -1,5 +1,5 @@
 <script setup>
-import { news, pillars, programs, stats } from '../data'
+import { news, pillars, programGroups, programs, stats } from '../data'
 import { asset, WHATSAPP } from '../utils'
 import DotField from '../components/DotField.vue'
 import SectionDivider from '../components/SectionDivider.vue'
@@ -21,6 +21,10 @@ function armStyle(index) {
     width: '32px',
     height: '32px',
   }
+}
+function programWhatsapp(title) {
+  const text = `Assalamualaikum Wr. Wb.\n\nSaya ingin bertanya tentang program ${title}.`
+  return `https://api.whatsapp.com/send?phone=+6287710555510&text=${encodeURIComponent(text)}`
 }
 function counterStyle(index) {
   return {
@@ -85,15 +89,42 @@ function counterStyle(index) {
         <p class="mt-2 max-w-lg text-3xl font-semibold tracking-tighter text-balance text-gray-900 md:text-4xl">
           Program yang kami jalankan untuk mendukung mualaf di Indonesia
         </p>
-        <div class="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          <div v-for="item in programs" :key="item.title" class="relative">
+        <div class="mt-10">
+          <span class="inline-flex rounded-full border border-primary px-4 py-1.5 text-xs font-bold tracking-[0.16em] text-primary uppercase">Program Utama</span>
+          <div class="mt-6 grid grid-cols-1 gap-6 md:grid-cols-3">
+            <article
+              v-for="item in programs"
+              :key="item.title"
+              class="flex h-full flex-col rounded-3xl border border-gray-200 bg-surface p-8 shadow-[0_10px_30px_-18px_rgba(0,0,0,0.55)] transition duration-300 ease-out hover:-translate-y-1 hover:border-primary/50 hover:shadow-[0_18px_40px_-18px_rgba(30,154,70,0.35)]"
+            >
+              <div class="flex size-16 items-center justify-center rounded-2xl bg-primary/15 text-primary">
+                <svg viewBox="0 0 24 24" class="size-7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <component :is="node[0]" v-for="(node, nodeIndex) in item.icon" :key="nodeIndex" v-bind="node[1]" />
+                </svg>
+              </div>
+              <h3 class="mt-8 text-2xl font-semibold tracking-tight text-gray-900">{{ item.title }}</h3>
+              <p class="mt-3 flex-1 text-sm leading-relaxed text-gray-600">{{ item.body }}</p>
+              <a :href="programWhatsapp(item.title)" target="_blank" rel="noopener" class="mt-8 inline-flex w-fit items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-white transition hover:brightness-95">
+                {{ item.button }}
+                <svg viewBox="0 0 24 24" class="size-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
+              </a>
+            </article>
+          </div>
+        </div>
+        <div class="mt-6 grid grid-cols-1 gap-6 lg:grid-cols-3">
+          <div v-for="group in programGroups" :key="group.title" class="relative">
             <article :class="cardClass">
               <div class="relative flex items-center gap-2">
                 <div class="absolute -left-4 h-5 w-0.75 rounded-r-sm bg-primary"></div>
-                <svg viewBox="0 0 24 24" class="size-5 shrink-0 text-primary" fill="currentColor" aria-hidden="true"><path :d="item.icon" /></svg>
-                <h3 class="font-medium text-gray-900">{{ item.title }}</h3>
+                <h3 class="font-medium text-gray-900">{{ group.title }}</h3>
               </div>
-              <p class="mt-2 text-gray-600 sm:text-sm">{{ item.body }}</p>
+              <p class="mt-2 text-gray-600 sm:text-sm">{{ group.body }}</p>
+              <ul class="mt-4 space-y-3">
+                <li v-for="child in group.items" :key="child.title" class="border-l-2 border-primary/80 pl-3">
+                  <p class="text-sm font-medium text-gray-900">{{ child.title }}</p>
+                  <p class="mt-0.5 text-sm leading-snug text-gray-600">{{ child.body }}</p>
+                </li>
+              </ul>
             </article>
           </div>
         </div>

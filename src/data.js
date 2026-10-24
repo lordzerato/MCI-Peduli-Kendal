@@ -6,38 +6,66 @@ export const news = {
 export const programs = [
   {
     title: 'Pembinaan Mualaf',
-    body: 'Membina mualaf dalam mempelajari agama Islam dengan sebenar-benarnya secara menyeluruh sesuai dengan kurikulum yang telah ditetapkan.',
-    icon: 'M14.1213 10.4792C13.7308 10.0886 13.0976 10.0886 12.7071 10.4792L12 11.1863C11.2189 11.9673 9.95259 11.9673 9.17154 11.1863C8.39049 10.4052 8.39049 9.13888 9.17154 8.35783L14.8022 2.72568C16.9061 2.24973 19.2008 2.83075 20.8388 4.46875C23.2582 6.88811 23.3716 10.7402 21.1792 13.2939L19.071 15.4289L14.1213 10.4792ZM3.16113 4.46875C5.33452 2.29536 8.66411 1.98283 11.17 3.53116L7.75732 6.94362C6.19523 8.50572 6.19523 11.0384 7.75732 12.6005C9.27209 14.1152 11.6995 14.1611 13.2695 12.7382L13.4142 12.6005L17.6568 16.8431L13.4142 21.0858C12.6331 21.8668 11.3668 21.8668 10.5858 21.0858L3.16113 13.6611C0.622722 11.1227 0.622722 7.00715 3.16113 4.46875Z',
+    body: 'Membimbing mualaf mempelajari Islam secara bertahap, mulai dari ibadah harian hingga pemahaman akidah yang benar.',
+    icon: [
+      ['path', { d: 'M12 7v14' }],
+      ['path', { d: 'M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z' }],
+    ],
+    button: 'Konsultasi',
   },
   {
-    title: 'Konsultasi dan Pengislaman',
-    body: 'Melayani konsultasi calon mualaf dan bimbingan secara intensif kepada calon mualaf sampai proses ikrar syahadat.',
-    icon: 'M10 3H14C18.4183 3 22 6.58172 22 11C22 15.4183 18.4183 19 14 19V22.5C9 20.5 2 17.5 2 11C2 6.58172 5.58172 3 10 3Z',
+    title: 'Pendampingan Mualaf',
+    body: 'Mendampingi mualaf dalam kehidupan sehari-hari agar tetap istiqamah dan merasa diterima di lingkungan Muslim.',
+    icon: [
+      ['path', { d: 'M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2' }],
+      ['path', { d: 'M16 3.128a4 4 0 0 1 0 7.744' }],
+      ['path', { d: 'M22 21v-2a4 4 0 0 0-3-3.87' }],
+      ['circle', { cx: '9', cy: '7', r: '4' }],
+    ],
+    button: 'Syahadat',
   },
   {
-    title: 'Bantuan Kebutuhan Pokok',
-    body: 'Program bantuan paket kebutuhan pangan atau bantuan tunai serta alat perlengkapan alat ibadah bagi mualaf yang membutuhkan.',
-    icon: 'M21 2V22H19V14H16V7C16 4.23858 18.2386 2 21 2ZM9 13.9V22H7V13.9C4.71776 13.4367 3 11.419 3 9V3H5V10H7V3H9V10H11V3H13V9C13 11.419 11.2822 13.4367 9 13.9Z',
+    title: 'Advokasi Untuk Mualaf',
+    body: 'Mendampingi mualaf yang menghadapi kendala hukum, keluarga, atau administrasi agar hak-haknya tetap terjaga.',
+    icon: [
+      ['path', { d: 'm14 13-8.381 8.38a1 1 0 0 1-3.001-3l8.384-8.381' }],
+      ['path', { d: 'm16 16 6-6' }],
+      ['path', { d: 'm21.5 10.5-8-8' }],
+      ['path', { d: 'm8 8 6-6' }],
+      ['path', { d: 'm8.5 7.5 8 8' }],
+    ],
+    button: 'Konsultasi Hukum',
+  },
+]
+
+export const programGroups = [
+  {
+    title: 'Program Pekanan',
+    body: 'Kegiatan rutin setiap pekan untuk menguatkan iman dan berbagi kepada sesama.',
+    items: [
+      { title: 'Warung Sedekah', body: 'Berbagi makanan kepada yang membutuhkan sebagai sedekah rutin setiap pekan.' },
+      { title: 'Hapus Tato Gratis', body: 'Layanan penghapusan tato bagi mualaf yang ingin menyesuaikan penampilan dengan syariat.' },
+      { title: 'Kajian Ahad Sore', body: 'Kajian rutin setiap Ahad sore untuk memperdalam pemahaman agama.' },
+      { title: 'Kajian Leren Ndugal', body: 'Kajian untuk menguatkan niat meninggalkan kebiasaan yang tidak sesuai syariat.' },
+    ],
   },
   {
-    title: 'Penanganan Advokasi',
-    body: 'Advokasi MCI adalah pendampingan kepada mualaf untuk mendapatkan haknya dari aspek hukum, kesehatan, pendidikan, dan ekonomi.',
-    icon: 'M12.9985 2L12.9979 3.278L17.9985 4.94591L21.631 3.73509L22.2634 5.63246L19.2319 6.643L22.3272 15.1549C21.2353 16.2921 19.6996 17 17.9985 17C16.2975 17 14.7618 16.2921 13.6699 15.1549L16.7639 6.643L12.9979 5.387V19H16.9985V21H6.99854V19H10.9979V5.387L7.23192 6.643L10.3272 15.1549C9.23528 16.2921 7.69957 17 5.99854 17C4.2975 17 2.76179 16.2921 1.66992 15.1549L4.76392 6.643L1.73363 5.63246L2.36608 3.73509L5.99854 4.94591L10.9979 3.278L10.9985 2H12.9985ZM17.9985 9.10267L16.5809 13H19.4159L17.9985 9.10267ZM5.99854 9.10267L4.58092 13H7.41592L5.99854 9.10267Z',
+    title: 'Program Bulanan',
+    body: 'Kegiatan setiap bulan untuk menjangkau mualaf dan masyarakat secara langsung.',
+    items: [
+      { title: 'Bergetar (Bergerak & Mengantar)', body: 'Menjangkau mualaf dan mengantar bantuan serta perhatian langsung ke yang membutuhkan.' },
+      { title: 'Safari Dakwah', body: 'Menyambangi wilayah sekitar untuk berdakwah, bersilaturahmi, dan menguatkan ukhuwah.' },
+    ],
   },
   {
-    title: 'Rumah Singgah',
-    body: 'Fasilitas yang digunakan untuk mendidik mualaf untuk memperdalam dan memperkuat keimanan dan ketakwaan, serta mengasah keterampilan mualaf sesuai minat dan bakat yang dimiliki.',
-    icon: 'M20 20C20 20.5523 19.5523 21 19 21H5C4.44772 21 4 20.5523 4 20V11L1 11L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11L20 11V20ZM7.5 13C7.5 15.4853 9.51472 17.5 12 17.5C14.4853 17.5 16.5 15.4853 16.5 13H14.5C14.5 14.3807 13.3807 15.5 12 15.5C10.6193 15.5 9.5 14.3807 9.5 13H7.5Z',
-  },
-  {
-    title: 'Mualaf Mandiri',
-    body: 'Mualaf mandiri adalah program pemberdayaan ekonomi bagi mualaf kurang mampu sehingga menjadi mualaf yang mampu hidup mandiri.',
-    icon: 'M3 3H12.382C12.7607 3 13.107 3.214 13.2764 3.55279L14 5H20C20.5523 5 21 5.44772 21 6V17C21 17.5523 20.5523 18 20 18H13.618C13.2393 18 12.893 17.786 12.7236 17.4472L12 16H5V22H3V3Z',
-  },
-  {
-    title: 'Kampung Hidayah',
-    body: 'Kampung hidayah adalah program untuk meningkatkan dan menguatkan akidah masyarakat.',
-    icon: 'M20 20C20 20.5523 19.5523 21 19 21H5C4.44772 21 4 20.5523 4 20V11H1L11.3273 1.6115C11.7087 1.26475 12.2913 1.26475 12.6727 1.6115L23 11H20V20ZM12 17L15.3588 13.6412C16.2374 12.7625 16.2374 11.3379 15.3588 10.4592C14.4801 9.58056 13.0555 9.58056 12.1768 10.4592L12 10.636L11.8232 10.4592C10.9445 9.58056 9.51992 9.58056 8.64124 10.4592C7.76256 11.3379 7.76256 12.7625 8.64124 13.6412L12 17Z',
+    title: 'Program Tahunan',
+    body: 'Program besar yang dijalankan pada momen tertentu sepanjang tahun.',
+    items: [
+      { title: 'Ifthar Ramadan', body: 'Berbuka puasa bersama dan berbagi hidangan ifthar di bulan Ramadan.' },
+      { title: 'Tebar Qurban', body: 'Menyalurkan daging kurban kepada mualaf dan warga yang membutuhkan setiap Iduladha.' },
+      { title: 'Wakaf Al-Qur\'an & Pembangunan', body: 'Menghimpun wakaf Al-Qur\'an serta mendukung pembangunan sarana ibadah dan pembinaan.' },
+      { title: 'Program Sosial Tanggap Bencana', body: 'Menyalurkan bantuan dengan cepat saat terjadi bencana bagi warga yang terdampak.' },
+    ],
   },
 ]
 
@@ -55,7 +83,7 @@ export const stats = [
     icon: '<circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/>',
   },
   {
-    value: '7',
+    value: '13',
     label: 'Program',
     icon: '<path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/>',
   },
